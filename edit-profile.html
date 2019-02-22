@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap-rtl.css">
+    <link rel="stylesheet" href="css/icofont.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+
+    <title> VARK   </title>
+  </head>
+  <body>
+
+
+
+<!--========================================================================================================================*/
+/*====================================================//  MAIN HEADER //====================================================*/
+/*=========================================================================================================================-->
+
+<section class="vark-header">
+      <div class="container">
+         <div class="logo"> المعلم حسام هلال   </div>
+         <div class="menu">
+            <a href="teacher-home.html"> <i class="icofont icofont-arrow-right"></i> </a>
+         </div>
+      </div>
+      
+</section>      
+
+<!--========================================================================================================================*/
+/*====================================================//     BODY     //====================================================*/
+/*=========================================================================================================================-->
+  
+<section class="class-page-bdy">
+    <div class="container">
+
+      <form>   
+		   <div class="add-class-pic  wow fadeInDown" data-wow-delay=".3s"> 
+
+<!--			  <input name="userfile" type="file" accept="application/pdf, application/vnd.ms-excel" />-->
+			   <div class="input-file-container">  
+					<input class="input-file" id="my-file" type="file">
+					<label tabindex="0" for="my-file" class="input-file-trigger">Select a file...</label>
+			   </div>
+				  <p class="file-return"></p>
+
+		   </div>
+
+		   <div class="about-teacher wow fadeInUp" data-wow-delay=".3s">
+
+			  
+			   <h5>  من أنا ؟  </h5>
+
+			   <p> <textarea type="text" class="form-control" placeholder="عن المعلم "> </textarea> </p>
+
+
+		   </div>
+		  
+		   <button type="submit" class="btn save-teacher-info"> حفظ </button>
+      </form>  
+      
+    
+    </div>      
+      
+</section>
+      
+
+      
+      
+      
+      
+      
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/edit.js"></script>
+      
+    <script>
+      new WOW().init();
+      </script>
+	  
+	<script>
+	  document.querySelector("html").classList.add('js');
+
+		var fileInput  = document.querySelector( ".input-file" ),  
+			button     = document.querySelector( ".input-file-trigger" ),
+			the_return = document.querySelector(".file-return");
+
+		button.addEventListener( "keydown", function( event ) {  
+			if ( event.keyCode == 13 || event.keyCode == 32 ) {  
+				fileInput.focus();  
+			}  
+		});
+		button.addEventListener( "click", function( event ) {
+		   fileInput.focus();
+		   return false;
+		});  
+		fileInput.addEventListener( "change", function( event ) {  
+			the_return.innerHTML = this.value;  
+		});   
+
+	</script>
+
+  </body>
+</html>
